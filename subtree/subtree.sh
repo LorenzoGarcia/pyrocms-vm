@@ -4,139 +4,96 @@ MY_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 source $MY_DIR/template.sh
 
+# Core
 
-### pyrocms-vm
-
-#### Adding subtree
-
+## pyrocms-vm
 info "pyrocms-vm | Add remote"
 git remote add -f pyrocms-vm git@github.com:LorenzoGarcia/pyrocms-vm.git
-success
-
 info "pyrocms-vm | Add subtree"
 git subtree add --prefix vm pyrocms-vm master --squash
-success
-
 info "pyrocms-vm | Fetch"
 git fetch pyrocms-vm master
-success
-
 info "pyrocms-vm | Pull subtree"
 git subtree pull --prefix vm pyrocms-vm master --squash
-success
-
-#### Contributing back to upstream
-
 info "pyrocms-vm | Push subtree to upstream"
 git subtree push --prefix=vm pyrocms-vm master
+
 success
 
-### pyrocms
-
-#### Adding subtree
-
+## pyrocms
 info "pyrocms | Add remote"
 git remote add -f pyrocms git@github.com:pyrocms/pyrocms.git
-success
-
 info "pyrocms | Add subtree"
 git subtree add --prefix www/dev/2.2 pyrocms/2.2/develop --squash
-success
-
 info "pyrocms | Fetch"
 git fetch pyrocms 2.2/develop
-success
-
 info "pyrocms | Pull subtree"
 git subtree pull --prefix www/dev/2.2 pyrocms 2.2/develop --squash
-success
-
-#### Contributing back to upstream
-
 info "pyrocms | Add upstream"
 git remote add pyrocms-upstream git@github.com:LorenzoGarcia/pyrocms.git
-success
-
 info "pyrocms | Push subtree to upstream"
 git subtree push --prefix=www/dev/2.2/ pyrocms-upstream 2.2/develop
+
 success
 
+# Libraries
 
-### pyrocms-streams
-
-#### Adding subtree
-
+## pyrocms-streams
 info "pyrocms-streams | Add remote"
 git remote add -f pyrocms-streams git@github.com:LorenzoGarcia/pyrocms-streams.git
-success
-
 info "pyrocms-streams | Add subtree"
 git subtree add --prefix www/dev/2.2/addons/shared_addons/libraries/streams pyrocms-streams master --squash
-success
-
 info "pyrocms-streams | Fetch"
 git fetch pyrocms-streams master
-success
-
 info "pyrocms-streams | Pull subtree"
 git subtree pull --prefix www/dev/2.2/addons/shared_addons/libraries/streams pyrocms-streams master --squash
-success
-
-#### Contributing back to upstream
-
 info "pyrocms-streams | Push subtree to upstream"
 git subtree push --prefix=www/dev/2.2/addons/shared_addons/modules/streams pyrocms-streams master
+
 success
 
+# Modules
 
-### pyrocms-logs
+## pyrocms-faq
+info "pyrocms-faq | Add remote"
+git remote add -f pyrocms-faq git@github.com:LorenzoGarcia/pyrocms-faq.git
+info "pyrocms-faq | Add subtree"
+git subtree add --prefix www/dev/2.2/addons/shared_addons/modules/faq pyrocms-faq master --squash
+info "pyrocms-faq | Fetch"
+git fetch pyrocms-faq master
+info "pyrocms-faq | Pull subtree"
+git subtree pull --prefix www/dev/2.2/addons/shared_addons/modules/faqfaq pyrocms-faq master --squash
+info "pyrocms-faq | Push subtree to upstream"
+git subtree push --prefix=www/dev/2.2/addons/shared_addons/modules/faq pyrocms-faq master
 
-#### Adding subtree
+success
 
+## pyrocms-logs
 info "pyrocms-logs | Add remote"
 git remote add -f pyrocms-logs git@github.com:LorenzoGarcia/pyrocms-logs.git
-success
-
 info "pyrocms-logs | Add subtree"
 git subtree add --prefix www/dev/2.2/addons/shared_addons/modules/logs pyrocms-logs master --squash
-success
-
 info "pyrocms-logs | Fetch"
 git fetch pyrocms-logs master
-success
-
 info "pyrocms-logs | Pull subtree"
 git subtree pull --prefix www/dev/2.2/addons/shared_addons/modules/logs pyrocms-logs master --squash
-success
-
-#### Contributing back to upstream
-
 info "pyrocms-logs | Push subtree to upstream"
 git subtree push --prefix=www/dev/2.2/addons/shared_addons/modules/logs pyrocms-logs master
+
 success
 
-### pyrocms-bootstrap
+# Themes
 
-#### Adding subtree
-
+## pyrocms-bootstrap
 info "pyrocms-bootstrap | Add remote"
 git remote add -f pyrocms-bootstrap git@github.com:LorenzoGarcia/pyrocms-bootstrap.git
-success
-
 info "pyrocms-bootstrap | Add subtree"
 git subtree add --prefix www/dev/2.2/addons/shared_addons/themes/bootstrap pyrocms-bootstrap master --squash
-success
-
 info "pyrocms-bootstrap | Fetch"
 git fetch pyrocms-bootstrap master
-success
-
 info "pyrocms-bootstrap | Pull subtree"
 git subtree pull --prefix www/dev/2.2/addons/shared_addons/themes/bootstrap pyrocms-bootstrap master --squash
-success
-
-#### Contributing back to upstream
-
 info "pyrocms-bootstrap | Push subtree to upstream"
 git subtree push --prefix=www/dev/2.2/addons/shared_addons/themes/bootstrap pyrocms-bootstrap master
+
 success

@@ -82,20 +82,6 @@ git subtree push --prefix=www/dev/2.2/addons/shared_addons/modules/logs pyrocms-
 
 success
 
-## pyrocms-robots
-info "pyrocms-robots | Add remote"
-git remote add -f pyrocms-robots git@github.com:LorenzoGarcia/pyrocms-robots.git
-info "pyrocms-robots | Add subtree"
-git subtree add --prefix www/dev/2.2/addons/shared_addons/modules/robots pyrocms-robots master --squash
-info "pyrocms-robots | Fetch"
-git fetch pyrocms-robots master
-info "pyrocms-robots | Pull subtree"
-git subtree pull --prefix www/dev/2.2/addons/shared_addons/modules/robots pyrocms-robots master --squash
-info "pyrocms-robots | Push subtree to upstream"
-git subtree push --prefix=www/dev/2.2/addons/shared_addons/modules/robots pyrocms-robots master
-
-success
-
 # Themes
 
 ## pyrocms-bootstrap

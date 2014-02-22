@@ -54,6 +54,22 @@ success
 
 # Modules
 
+## pyrocms-database
+info "pyrocms | Add remote"
+git remote add -f pyrocms-database git@github.com:adamfairholm/PyroDatabase.git
+info "pyrocms | Add subtree"
+git subtree add --prefix www/dev/2.2/addons/shared_addons/modules/database pyrocms-database master --squash
+info "pyrocms | Fetch"
+git fetch pyrocms-database master
+info "pyrocms | Pull subtree"
+git subtree pull --prefix www/dev/2.2/addons/shared_addons/modules/faqfaq pyrocms-database master --squash
+info "pyrocms | Add upstream"
+git remote add pyrocms-database-upstream git@github.com:LorenzoGarcia/PyroDatabase.git
+info "pyrocms | Push subtree to upstream"
+git subtree push --prefix=www/dev/2.2/addons/shared_addons/modules/faq pyrocms-database-upstream master
+
+success
+
 ## pyrocms-faq
 info "pyrocms-faq | Add remote"
 git remote add -f pyrocms-faq git@github.com:LorenzoGarcia/pyrocms-faq.git

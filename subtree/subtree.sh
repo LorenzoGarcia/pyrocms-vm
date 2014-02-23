@@ -54,6 +54,22 @@ success
 
 # Modules
 
+## pyrocms-database
+info "pyrocms | Add remote"
+git remote add -f pyrocms-database git@github.com:adamfairholm/PyroDatabase.git
+info "pyrocms | Add subtree"
+git subtree add --prefix www/dev/2.2/addons/shared_addons/modules/database pyrocms-database master --squash
+info "pyrocms | Fetch"
+git fetch pyrocms-database master
+info "pyrocms | Pull subtree"
+git subtree pull --prefix www/dev/2.2/addons/shared_addons/modules/faqfaq pyrocms-database master --squash
+info "pyrocms | Add upstream"
+git remote add pyrocms-database-upstream git@github.com:LorenzoGarcia/PyroDatabase.git
+info "pyrocms | Push subtree to upstream"
+git subtree push --prefix=www/dev/2.2/addons/shared_addons/modules/faq pyrocms-database-upstream master
+
+success
+
 ## pyrocms-faq
 info "pyrocms-faq | Add remote"
 git remote add -f pyrocms-faq git@github.com:LorenzoGarcia/pyrocms-faq.git
@@ -79,6 +95,20 @@ info "pyrocms-logs | Pull subtree"
 git subtree pull --prefix www/dev/2.2/addons/shared_addons/modules/logs pyrocms-logs master --squash
 info "pyrocms-logs | Push subtree to upstream"
 git subtree push --prefix=www/dev/2.2/addons/shared_addons/modules/logs pyrocms-logs master
+
+success
+
+## pyrocms-robots
+info "pyrocms-robots | Add remote"
+git remote add -f pyrocms-robots git@github.com:LorenzoGarcia/pyrocms-robots.git
+info "pyrocms-robots | Add subtree"
+git subtree add --prefix www/dev/2.2/addons/shared_addons/modules/robots pyrocms-robots master --squash
+info "pyrocms-robots | Fetch"
+git fetch pyrocms-robots master
+info "pyrocms-robots | Pull subtree"
+git subtree pull --prefix www/dev/2.2/addons/shared_addons/modules/robots pyrocms-robots master --squash
+info "pyrocms-robots | Push subtree to upstream"
+git subtree push --prefix=www/dev/2.2/addons/shared_addons/modules/robots pyrocms-robots master
 
 success
 

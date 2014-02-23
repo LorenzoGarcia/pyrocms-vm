@@ -55,7 +55,7 @@ function addons {
 	git fetch pyrocms-streams $3
 	info "$2 | Pull subtree"
 	git subtree pull --prefix www/dev/2.2/addons/shared_addons/$1 $2 $3 --squash
-	info "$2| Push subtree to upstream"
+	info "$2 | Push subtree to upstream"
 	git subtree push --prefix=www/dev/2.2/addons/shared_addons/$1 $2 $3
 
 	success

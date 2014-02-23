@@ -81,13 +81,13 @@ do
 			pyrocms-vm
 			pyrocms
 
-			addons libraries/streams pyrocms-vm master
+			addons libraries/streams pyrocms-streams master
 
 			pyrocms-database
 
 			addons modules/faq pyrocms-faq master
 			addons modules/logs pyrocms-logs master
-			addons modules/robots pyrocms-faq master
+			addons modules/robots pyrocms-robots master
 
 			addons themes/bootstrap pyrocms-bootstrap master
 			break

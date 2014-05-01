@@ -85,6 +85,7 @@ options=(
 	"pyrocms-logs"
 	"pyrocms-robots"
 	"pyrocms-bootstrap"
+	"mediawiki"
 	"Quit"
 	)
 select opt in "${options[@]}"

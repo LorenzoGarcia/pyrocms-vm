@@ -65,7 +65,7 @@ function mediawiki {
 	info "mediawiki | Add remote"
 	git remote add -f mediawiki https://gerrit.wikimedia.org/r/p/mediawiki/core.git
 	info "mediawiki | Add subtree"
-	git subtree add --prefix www/dev/mediawiki master --squash
+	git subtree add --prefix www/dev/mediawiki mediawiki master --squash
 	info "mediawiki | Fetch"
 	git fetch mediawiki master
 	info "mediawiki | Pull subtree"
